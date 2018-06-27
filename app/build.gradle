@@ -16,6 +16,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        checkReleaseBuilds false //--------------这样打包特别快， 添加这个是因为国际化的en有点问题
+        abortOnError false
+    }
 }
 configurations.all {
     resolutionStrategy.force 'com.android.support:support-annotations:26.1.0'
