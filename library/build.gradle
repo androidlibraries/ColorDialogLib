@@ -41,7 +41,6 @@ buildscript {
         maven { url "https://jitpack.io" }
         jcenter { url "http://jcenter.bintray.com/" }
         maven { url 'http://repo.jfrog.org/artifactory/gradle-plugins' }
-        maven { url "https://maven.google.com" }
         mavenCentral()
         jcenter()
     }
