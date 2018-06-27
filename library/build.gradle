@@ -37,15 +37,26 @@ android {
 buildscript {
     repositories { //根目录下的 allprojects
         mavenLocal()
+
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/central/' }
-        maven { url 'https://repo1.maven.org/maven2/' }
-        maven { url "http://oss.sonatype.org/content/repositories/snapshots" }
-        maven { url "https://jitpack.io" }
-        jcenter { url "http://jcenter.bintray.com/" }
-        maven { url 'http://repo.jfrog.org/artifactory/gradle-plugins' }
-        mavenCentral()
+
         jcenter()
+
+        maven { url 'https://repo1.maven.org/maven2/' }
+
+        mavenCentral()
+
+        google()
+
+        maven { url "https://jitpack.io" }
+
+        jcenter { url "http://jcenter.bintray.com/" }
+
+        maven { url 'http://repo.jfrog.org/artifactory/gradle-plugins' }
+
+        maven { url "http://oss.sonatype.org/content/repositories/snapshots" }
+
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/central/' }
     }
     dependencies {
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
