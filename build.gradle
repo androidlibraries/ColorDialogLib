@@ -3,17 +3,17 @@
 buildscript {
     
     repositories {
+        // 如果有新的库引入,尽量把慢的放在后面
+
+        // 前4个推荐的 jitpack.io
         mavenLocal()
+        mavenCentral()
+        jcenter()
+        google()
 
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
 
-        jcenter()
-
         maven { url 'https://repo1.maven.org/maven2/' }
-
-        mavenCentral()
-
-        google()
 
         maven { url "https://jitpack.io" }
 
@@ -24,6 +24,8 @@ buildscript {
         maven { url "http://oss.sonatype.org/content/repositories/snapshots" }
 
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/central/' }
+
+//        如果有新的库引入,尽量把慢的放在后面
 
     }
     dependencies {
